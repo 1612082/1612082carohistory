@@ -83,7 +83,8 @@ function Square(props) {
       this.setState({
         history: history.concat([
           {
-            squares: squares
+            squares: squares,
+            latestMoveSquare: i
           }
         ]),
         stepNumber: history.length,
@@ -112,8 +113,11 @@ function Square(props) {
 
       const isAscending = this.state.isAscending;
       const moves = history.map((step, move) => {
+        const latestMoveSquare = step.latestMoveSquare;
+        const col = 1 + latestMoveSquare % SizeBoard;
+        const row = 1 + Math.floor(latestMoveSquare / SizeBoard);
         const desc = move ?
-          'Go to move #' + move :
+          `Go to move #${move} ( ${row}, ${col})` :
           'Go to begin game';
         return (
           <li key={move}>
