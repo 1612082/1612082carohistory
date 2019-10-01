@@ -9,6 +9,13 @@
     "react-scripts": "3.1.2",
     "reactstrap": "^8.0.1"
   },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
   "scripts": {
     "pre-commit": "lint-staged",
     "start": "react-scripts start",
@@ -17,13 +24,7 @@
     "eject": "react-scripts eject"
     
   },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "pretty-quick --staged",
-      "eslint src/ --fix",
-      "git add"
-    ]
-  },
+  
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
