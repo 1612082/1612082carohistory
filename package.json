@@ -10,7 +10,7 @@
     "reactstrap": "^8.0.1"
   },
   "scripts": {
-    "precommit": " lint-staged",
+    "pre-commit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
