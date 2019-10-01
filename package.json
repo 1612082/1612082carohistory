@@ -17,7 +17,7 @@
     ]
   },
   "scripts": {
-    "pre-commit": "lint-staged",
+    "preommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
